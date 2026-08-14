@@ -99,6 +99,9 @@ git checkout develop
 git checkout -b feature/contact-section
 git checkout develop
 git checkout -b hotfix/deploy-fix
+git checkout -b docs/readme-finish
+git checkout main
+git merge --no-ff develop -m "merge: develop into main"
 ```
 
 ## Commit Sequence Commands
@@ -115,6 +118,9 @@ git add README.md && git commit -m "docs: expand git workflow notes"
 git add .github/workflows/deploy.yml README.md && git commit -m "fix: harden GitHub Pages deployment workflow"
 git add README.md && git commit -m "docs: add git flow overview"
 git add README.md && git commit -m "docs: refine deployment guidance"
+git add index.html && git commit -m "style: polish document metadata"
+git add src/components/sections/HeroSection.jsx src/components/sections/AboutSection.jsx && git commit -m "feat: refine hero and about copy"
+git add README.md && git commit -m "docs: expand branch protection guidance"
 ```
 
 ## Conflict Simulation Commands
