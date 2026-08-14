@@ -5,7 +5,7 @@ export default function HeroSection() {
         <p className="hero__eyebrow">Frontend Developer · UI Enthusiast</p>
         <h1 id="hero-title">Building thoughtful digital experiences.</h1>
         <p className="hero__text">
-          I design and build clean, responsive interfaces with React, Vite, and modern CSS.
+          I design and build polished, responsive interfaces with React, Vite, and modern CSS.
         </p>
         <div className="hero__actions">
           <a className="button button--primary" href="#projects">

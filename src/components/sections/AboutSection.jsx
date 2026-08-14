@@ -8,7 +8,7 @@ export default function AboutSection() {
           id="about-title"
           eyebrow="About"
           title="About Me"
-          description="I am a student developer focused on building accessible and maintainable interfaces."
+          description="I am a student developer focused on building accessible, maintainable, and clear interfaces."
         />
         <div className="about-grid">
           <p>
