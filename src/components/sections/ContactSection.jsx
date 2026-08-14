@@ -5,6 +5,7 @@ export default function ContactSection() {
     <section className="section" id="contact" aria-labelledby="contact-title">
       <div className="container">
         <SectionHeading
+          id="contact-title"
           eyebrow="Contact"
           title="Let’s Work Together"
           description="If you need a polished frontend or want to talk through a project idea, reach out."

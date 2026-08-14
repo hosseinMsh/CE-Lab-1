@@ -5,6 +5,7 @@ export default function SkillsSection() {
     <section className="section" id="skills" aria-labelledby="skills-title">
       <div className="container">
         <SectionHeading
+          id="skills-title"
           eyebrow="Skills"
           title="Core Skills"
           description="A compact stack for building polished static web experiences."

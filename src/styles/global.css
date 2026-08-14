@@ -188,6 +188,11 @@ textarea {
   margin-bottom: 2rem;
 }
 
+.section-heading h2,
+.hero h1 {
+  margin-top: 0;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -246,6 +251,10 @@ textarea {
   color: #2563eb;
 }
 
+.project-card__link:hover {
+  text-decoration: underline;
+}
+
 .contact-card {
   display: flex;
   flex-wrap: wrap;
@@ -254,6 +263,14 @@ textarea {
   border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 1.25rem;
   background: rgba(255, 255, 255, 0.76);
+}
+
+.contact-card a {
+  font-weight: 600;
+}
+
+:root[data-theme='dark'] .contact-card {
+  background: rgba(15, 23, 42, 0.8);
 }
 
 .navbar__menu-button {
@@ -334,5 +351,9 @@ textarea {
 
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    flex-direction: column;
   }
 }
