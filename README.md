@@ -39,3 +39,13 @@ The workflow follows Git Flow style:
 - `develop` integrates finished work
 - `feature/*` branches implement scoped tasks
 - `hotfix/*` branches fix release issues
+
+Typical flow:
+
+1. Create a feature branch from `develop`
+2. Implement and commit the change in small steps
+3. Open a pull request into `develop`
+4. Resolve conflicts before merge if needed
+5. Merge `develop` into `main` when the release is ready
+
+This branch also introduces a contact form and footer refinement, which will later be merged through the same PR-based process.
