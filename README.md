@@ -209,6 +209,12 @@ Recommended GitHub settings for `main`:
 - Disable direct pushes
 - Restrict force pushes
 
+Suggested workflow checks:
+
+- Build must pass on `main`
+- Review from another contributor before merge
+- Deployment workflow must complete successfully
+
 ## Result
 
 The final project is a clean static portfolio site with a realistic Git Flow history, branch-based development, merge conflict handling, and GitHub Pages deployment readiness.
