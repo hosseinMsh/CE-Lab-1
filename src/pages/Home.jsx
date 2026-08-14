@@ -6,12 +6,12 @@ import SkillsSection from '../components/sections/SkillsSection';
 
 export default function Home() {
   return (
-    <>
+    <div className="home-page">
       <HeroSection />
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
-    </>
+    </div>
   );
 }
