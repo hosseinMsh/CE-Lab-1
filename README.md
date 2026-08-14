@@ -2,6 +2,15 @@
 
 This repository contains a small, professional portfolio website built with React and Vite.
 
+## Git Workflow
+
+This project follows a Git Flow style process:
+
+- `main` is the protected release branch
+- `develop` collects finished work
+- `feature/*` branches carry new UI work
+- `hotfix/*` branches address release issues
+
 ## Deployment
 
 To deploy to GitHub Pages:
