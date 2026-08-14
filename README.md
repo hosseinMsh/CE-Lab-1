@@ -2,6 +2,10 @@
 
 This repository contains a small, professional portfolio website built with React and Vite.
 
+## Git Workflow
+
+Development uses a branch-based process with pull requests and review before merge.
+
 ## Deployment
 
 To deploy to GitHub Pages:
