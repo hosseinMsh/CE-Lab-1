@@ -1,72 +1,69 @@
-# Personal Portfolio Website
+# وب‌سایت نمونه‌کار شخصی
 
-A responsive portfolio site built with React and Vite to demonstrate a complete Git lab workflow.
+یک وب‌سایت نمونه‌کار واکنش‌گرا که با React و Vite ساخته شده است تا یک گردش‌کار کامل Git را نمایش دهد.
 
-## Project Description
+## توضیحات پروژه
 
-This project includes:
+این پروژه شامل موارد زیر است:
 
-- Home hero section
-- About section
-- Skills section
-- Projects section
-- Contact section
-- Responsive navigation
-- Footer
-- Dark/light theme toggle
+- بخش قهرمان صفحه اصلی
+- بخش درباره من
+- بخش مهارت‌ها
+- بخش پروژه‌ها
+- بخش تماس
+- پیمایش واکنش‌گرا
+- پابرگ
+- کلید تغییر پوسته تاریک/روشن
 
-## Installation
-
+## نصب
 ```bash
 npm install
-```
 
-## Running Locally
+## اجرای محلی
 
-```bash
+bash
 npm run dev
-```
 
-## Deployment
+## استقرار
 
-This project is prepared for GitHub Pages deployment through GitHub Actions.
+این پروژه برای استقرار در GitHub Pages از طریق GitHub Actions آماده شده است.
 
-### Repository Settings
+### تنظیمات مخزن
 
-1. Open repository Settings
-2. Go to `Pages`
-3. Set source to `GitHub Actions`
-4. Save changes
+1. تنظیمات مخزن را باز کنید.
+2. به بخش `Pages` بروید.
+3. منبع را روی `GitHub Actions` تنظیم کنید.
+4. تغییرات را ذخیره کنید.
 
-### Actions Deployment
+### استقرار با Actions
 
-The workflow at `.github/workflows/deploy.yml`:
+گردش‌کار موجود در `.github/workflows/deploy.yml`:
 
-1. Checks out the repository
-2. Installs dependencies
-3. Builds the React app
-4. Deploys the `dist` folder to GitHub Pages
+1. مخزن را دریافت می‌کند.
+2. وابستگی‌ها را نصب می‌کند.
+3. برنامه React را می‌سازد.
+4. پوشه `dist` را در GitHub Pages مستقر می‌کند.
 
-## Git Workflow Explanation
+## توضیح گردش‌کار Git
 
-This repository follows a Git Flow style approach:
+این مخزن از رویکردی مشابه Git Flow پیروی می‌کند:
 
-- `main` stores the stable release
-- `develop` integrates completed work
-- `feature/*` branches add scoped UI features
-- `hotfix/*` branches fix deployment or release issues
+- شاخه `main` نسخه پایدار را نگهداری می‌کند.
+- شاخه `develop` کارهای تکمیل‌شده را یکپارچه می‌کند.
+- شاخه‌های `feature/*` قابلیت‌های مشخص رابط کاربری را اضافه می‌کنند.
+- شاخه‌های `hotfix/*` مشکلات استقرار یا انتشار را برطرف می‌کنند.
 
-### Branch Flow
+### روند شاخه‌ها
 
-1. Create a branch from `develop`
-2. Implement the feature in small commits
-3. Open a pull request into `develop`
-4. Resolve conflicts if needed
-5. Merge `develop` into `main` for release
+1. یک شاخه از `develop` ایجاد کنید.
+2. قابلیت را در قالب commitهای کوچک پیاده‌سازی کنید.
+3. یک pull request به مقصد `develop` باز کنید.
+4. در صورت نیاز، تعارض‌ها را برطرف کنید.
+5. برای انتشار، `develop` را با `main` ادغام کنید.
 
-### Commit Style
+### سبک commit
 
-Examples used in this project:
+نمونه‌های استفاده‌شده در این پروژه:
 
 - `feat: initialize React project scaffold`
 - `feat: add responsive navigation and theme toggle`
@@ -75,20 +72,20 @@ Examples used in this project:
 - `fix: harden GitHub Pages deployment workflow`
 - `docs: refine deployment guidance`
 
-### Pull Requests
+### Pull Requestها
 
-Each feature branch should be merged through a pull request. PRs keep the history reviewable, enforce discussion, and help catch merge conflicts before release.
+هر شاخه قابلیت باید از طریق یک pull request ادغام شود. PRها تاریخچه پروژه را قابل بررسی نگه می‌دارند، گفت‌وگو و بررسی را الزامی می‌کنند و به شناسایی تعارض‌های ادغام پیش از انتشار کمک می‌کنند.
 
-### Conflict Resolutions
+### رفع تعارض‌ها
 
-Two real conflicts were created and resolved in this lab:
+در این آزمایشگاه دو تعارض واقعی ایجاد و برطرف شدند:
 
-1. `feature/navbar` vs `feature/home-page` on `src/components/Navbar.jsx`
-2. `docs/readme-finish` vs `develop` on `README.md`
+1. `feature/navbar` در برابر `feature/home-page` در فایل `src/components/Navbar.jsx`
+2. `docs/readme-finish` در برابر `develop` در فایل `README.md`
 
-## Git Commands Step by Step
+## دستورات Git به‌صورت گام‌به‌گام
 
-```bash
+bash
 git init
 git branch -m main
 git checkout -b develop
@@ -102,11 +99,10 @@ git checkout -b hotfix/deploy-fix
 git checkout -b docs/readme-finish
 git checkout main
 git merge --no-ff develop -m "merge: develop into main"
-```
 
-## Commit Sequence Commands
+## دستورات توالی commitها
 
-```bash
+bash
 git add . && git commit -m "feat: initialize React project scaffold"
 git add src/components/Navbar.jsx src/components/ThemeToggle.jsx src/App.jsx src/styles/global.css && git commit -m "feat: add responsive navigation and theme toggle"
 git add src/styles/global.css && git commit -m "style: improve navbar interactions and focus states"
@@ -121,105 +117,99 @@ git add README.md && git commit -m "docs: refine deployment guidance"
 git add index.html && git commit -m "style: polish document metadata"
 git add src/components/sections/HeroSection.jsx src/components/sections/AboutSection.jsx && git commit -m "feat: refine hero and about copy"
 git add README.md && git commit -m "docs: expand branch protection guidance"
-```
 
-## Conflict Simulation Commands
+## دستورات شبیه‌سازی تعارض
 
-### Conflict 1: Navbar
+### تعارض ۱: نوار پیمایش
 
-```bash
+bash
 git checkout develop
 git merge --no-ff feature/navbar -m "merge: feature/navbar into develop"
 git merge --no-ff feature/home-page -m "merge: feature/home-page into develop"
-```
 
-Resolve the conflict in `src/components/Navbar.jsx` and `src/styles/global.css`, then:
+تعارض موجود در `src/components/Navbar.jsx` و `src/styles/global.css` را برطرف کنید، سپس:
 
-```bash
+bash
 git add src/components/Navbar.jsx src/styles/global.css
 git commit --no-edit
-```
 
-### Conflict 2: README
+### تعارض ۲: README
 
-```bash
+bash
 git checkout develop
 git merge --no-ff docs/readme-finish -m "merge: docs/readme-finish into develop"
-```
 
-Resolve the conflict in `README.md`, then:
+تعارض موجود در `README.md` را برطرف کنید، سپس:
 
-```bash
+bash
 git add README.md
 git commit --no-edit
-```
 
-## Git Theory Questions
+## پرسش‌های تئوری Git
 
-### 1. What is `.git` directory?
+### ۱. پوشه `.git` چیست؟
 
-It is Git’s internal database for the repository.
+این پوشه پایگاه داده داخلی Git برای مخزن است.
 
-### 2. What information is stored inside `.git`?
+### ۲. چه اطلاعاتی درون `.git` ذخیره می‌شود؟
 
-Objects, commits, branches, tags, refs, index data, logs, and configuration.
+آبجکت‌ها، commitها، شاخه‌ها، tagها، refها، داده‌های index، گزارش‌ها و تنظیمات.
 
-### 3. How is `.git` created?
+### ۳. `.git` چگونه ایجاد می‌شود؟
 
-By running `git init` or cloning an existing repository.
+با اجرای `git init` یا clone کردن یک مخزن موجود.
 
-### 4. What does atomic mean in:
+### ۴. منظور از atomic در موارد زیر چیست؟
 
-- Atomic commit: one logical change that is complete by itself
-- Atomic pull request: one PR that delivers one coherent change
+- **Atomic commit:** یک تغییر منطقی که به‌تنهایی کامل است.
+- **Atomic pull request:** یک PR که یک تغییر منسجم را ارائه می‌کند.
 
-### 5. Explain differences: `git fetch`, `git pull`, `git merge`, `git rebase`, `git cherry-pick`
+### ۵. تفاوت‌های `git fetch`، `git pull`، `git merge`، `git rebase` و `git cherry-pick` را توضیح دهید.
 
-- `git fetch`: downloads remote updates without changing local branches
-- `git pull`: fetches and merges or rebases in one step
-- `git merge`: combines branch histories with a merge commit or fast-forward
-- `git rebase`: rewrites commits on top of another base
-- `git cherry-pick`: copies a specific commit onto another branch
+- `git fetch`: به‌روزرسانی‌های remote را دریافت می‌کند، بدون اینکه شاخه‌های محلی را تغییر دهد.
+- `git pull`: در یک مرحله، fetch را انجام داده و سپس merge یا rebase می‌کند.
+- `git merge`: تاریخچه شاخه‌ها را با یک merge commit یا fast-forward ترکیب می‌کند.
+- `git rebase`: commitها را روی یک پایه دیگر بازنویسی می‌کند.
+- `git cherry-pick`: یک commit مشخص را روی شاخه‌ای دیگر کپی می‌کند.
 
-### 6. Explain differences: `git reset`, `git revert`, `git restore`, `git switch`, `git checkout`
+### ۶. تفاوت‌های `git reset`، `git revert`، `git restore`، `git switch` و `git checkout` را توضیح دهید.
 
-- `git reset`: moves HEAD and can rewrite history
-- `git revert`: creates a new commit that undoes a previous one
-- `git restore`: restores working tree or index files
-- `git switch`: moves between branches
-- `git checkout`: older multi-purpose command for branches and files
+- `git reset`: موقعیت HEAD را جابه‌جا می‌کند و می‌تواند تاریخچه را بازنویسی کند.
+- `git revert`: یک commit جدید ایجاد می‌کند که اثر یک commit قبلی را برمی‌گرداند.
+- `git restore`: فایل‌های درخت کاری یا index را بازیابی می‌کند.
+- `git switch`: بین شاخه‌ها جابه‌جا می‌شود.
+- `git checkout`: دستور قدیمی و چندمنظوره برای شاخه‌ها و فایل‌ها است.
 
-### 7. Explain staging area/index and `git stash`
+### ۷. ناحیه staging یا index و `git stash` را توضیح دهید.
 
-- Staging area/index: the place where changes are prepared before commit
-- `git stash`: temporarily shelves local changes
+- **ناحیه staging یا index:** محلی که تغییرات پیش از commit در آن آماده می‌شوند.
+- `git stash`: تغییرات محلی را به‌طور موقت کنار می‌گذارد.
 
-### 8. Explain snapshot and relationship between snapshot and commit
+### ۸. Snapshot و رابطه آن با commit را توضیح دهید.
 
-- Snapshot: the recorded state of tracked files at one point in time
-- A commit points to a snapshot plus metadata and parent commit links
+- **Snapshot:** وضعیت ثبت‌شده فایل‌های تحت ردیابی در یک لحظه مشخص.
+- یک commit به‌علاوه فراداده و پیوندهای commit والد، به یک snapshot اشاره می‌کند.
 
-### 9. Local repository vs remote repository
+### ۹. مخزن محلی در برابر مخزن remote
 
-- Local repository: your copy on your machine
-- Remote repository: shared copy on GitHub or another server
+- **مخزن محلی:** نسخه‌ای از مخزن که روی دستگاه شما قرار دارد.
+- **مخزن remote:** نسخه‌ای مشترک که در GitHub یا سرور دیگری قرار دارد.
 
-## Protected Branch Rules
+## قوانین شاخه محافظت‌شده
 
-Recommended GitHub settings for `main`:
+تنظیمات پیشنهادی GitHub برای `main`:
 
-- Protect branch
-- Require pull request before merge
-- Require at least one review
-- Require status checks to pass
-- Disable direct pushes
-- Restrict force pushes
+- محافظت از شاخه
+- الزام pull request پیش از ادغام
+- الزام حداقل یک بررسی
+- الزام موفقیت‌آمیز بودن بررسی‌های وضعیت
+- غیرفعال کردن push مستقیم
+- محدود کردن push اجباری
 
-Suggested workflow checks:
+بررسی‌های پیشنهادی گردش‌کار:
 
-- Build must pass on `main`
-- Review from another contributor before merge
-- Deployment workflow must complete successfully
+- ساخت پروژه باید روی `main` موفق باشد.
+- پیش از ادغام باید بررسی یک مشارکت‌کننده دیگر انجام ش
 
 ## Result
 
