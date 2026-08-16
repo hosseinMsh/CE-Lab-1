@@ -18,12 +18,12 @@
 ## نصب
 ```bash
 npm install
-
+```
 ## اجرای محلی
 
-bash
+```bash
 npm run dev
-
+```
 ## استقرار
 
 این پروژه برای استقرار در GitHub Pages از طریق GitHub Actions آماده شده است.
@@ -85,7 +85,7 @@ npm run dev
 
 ## دستورات Git به‌صورت گام‌به‌گام
 
-bash
+```bash
 git init
 git branch -m main
 git checkout -b develop
@@ -99,10 +99,10 @@ git checkout -b hotfix/deploy-fix
 git checkout -b docs/readme-finish
 git checkout main
 git merge --no-ff develop -m "merge: develop into main"
-
+```
 ## دستورات توالی commitها
 
-bash
+```bash
 git add . && git commit -m "feat: initialize React project scaffold"
 git add src/components/Navbar.jsx src/components/ThemeToggle.jsx src/App.jsx src/styles/global.css && git commit -m "feat: add responsive navigation and theme toggle"
 git add src/styles/global.css && git commit -m "style: improve navbar interactions and focus states"
@@ -117,34 +117,34 @@ git add README.md && git commit -m "docs: refine deployment guidance"
 git add index.html && git commit -m "style: polish document metadata"
 git add src/components/sections/HeroSection.jsx src/components/sections/AboutSection.jsx && git commit -m "feat: refine hero and about copy"
 git add README.md && git commit -m "docs: expand branch protection guidance"
-
+```
 ## دستورات شبیه‌سازی تعارض
 
 ### تعارض ۱: نوار پیمایش
 
-bash
+```bash
 git checkout develop
 git merge --no-ff feature/navbar -m "merge: feature/navbar into develop"
 git merge --no-ff feature/home-page -m "merge: feature/home-page into develop"
-
+```
 تعارض موجود در `src/components/Navbar.jsx` و `src/styles/global.css` را برطرف کنید، سپس:
 
-bash
+```bash
 git add src/components/Navbar.jsx src/styles/global.css
 git commit --no-edit
-
+```
 ### تعارض ۲: README
 
-bash
+```bash
 git checkout develop
 git merge --no-ff docs/readme-finish -m "merge: docs/readme-finish into develop"
-
+```
 تعارض موجود در `README.md` را برطرف کنید، سپس:
 
-bash
+```bash
 git add README.md
 git commit --no-edit
-
+```
 ## پرسش‌های تئوری Git
 
 ### ۱. پوشه `.git` چیست؟
@@ -195,22 +195,12 @@ git commit --no-edit
 - **مخزن محلی:** نسخه‌ای از مخزن که روی دستگاه شما قرار دارد.
 - **مخزن remote:** نسخه‌ای مشترک که در GitHub یا سرور دیگری قرار دارد.
 
-## قوانین شاخه محافظت‌شده
-
-تنظیمات پیشنهادی GitHub برای `main`:
-
-- محافظت از شاخه
-- الزام pull request پیش از ادغام
-- الزام حداقل یک بررسی
-- الزام موفقیت‌آمیز بودن بررسی‌های وضعیت
-- غیرفعال کردن push مستقیم
-- محدود کردن push اجباری
-
-بررسی‌های پیشنهادی گردش‌کار:
-
-- ساخت پروژه باید روی `main` موفق باشد.
-- پیش از ادغام باید بررسی یک مشارکت‌کننده دیگر انجام ش
-
-## Result
-
-The final project is a clean static portfolio site with a realistic Git Flow history, branch-based development, merge conflict handling, and GitHub Pages deployment readiness.
+### نحوه استفاده از AI 
+ در این آزمایش از دو پلتفرم هوش مصنوعی chatgpt ,OpenCodeاستفاده کرده‌ایم.
+ که بار اول به chatgpt متن آزمایش را داده ایم که خود را با محتوای آن سازگار کند بعد در قسمت بعد هم از او خواسته شد که یک پرامپ برای تولید آزمایش انجام بدهد
+ در opencode پرامپ تولیدی از chatgpt دادیم تا آزمایش را انجام دهد.
+ در تصاویر زیر میتوانید آن دستورات را ببینید.
+ ![](screnshots/chatgpt-1.png "سوال اول به chat gpt برای فهم مسئله")
+ ![](screnshots/chatgpt-2.png "سوال دوم برای chat gpt برای تولید پرامپ تولید محتوا")
+![](screnshots/opencode-1.png "فرستادن پرامپ تولید برای open code با مودل chat gpt mini 5.4")
+![](screnshots/opencode-plugin.png "پلاگین های opencode")
