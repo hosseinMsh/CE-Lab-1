@@ -195,11 +195,333 @@ git commit --no-edit
 - **مخزن محلی:** نسخه‌ای از مخزن که روی دستگاه شما قرار دارد.
 - **مخزن remote:** نسخه‌ای مشترک که در GitHub یا سرور دیگری قرار دارد.
 
-### نحوه استفاده از AI 
+## نحوه استفاده از AI 
  در این آزمایش از دو پلتفرم هوش مصنوعی chatgpt ,OpenCodeاستفاده کرده‌ایم.
  که بار اول به chatgpt متن آزمایش را داده ایم که خود را با محتوای آن سازگار کند بعد در قسمت بعد هم از او خواسته شد که یک پرامپ برای تولید آزمایش انجام بدهد
  در opencode پرامپ تولیدی از chatgpt دادیم تا آزمایش را انجام دهد.
  در تصاویر زیر میتوانید آن دستورات را ببینید.
+### پرامپ تولیدی chatgpt
+```text
+You are an expert software engineer and Git workflow instructor.
+
+Your task is to implement a complete university Git laboratory project.
+
+Project goal:
+Create a professional static frontend website and demonstrate a complete Git workflow including branches, meaningful commits, pull requests, conflict resolution, GitHub Actions CI/CD, and GitHub Pages deployment.
+
+The project must satisfy all requirements below.
+
+========================
+1. Technology Stack
+========================
+
+Create a modern static frontend application.
+
+Use:
+- React + Vite
+- JavaScript or TypeScript
+- Modern CSS (CSS modules or Tailwind if appropriate)
+
+The website should be a small but professional project.
+
+Suggested project:
+"Personal Portfolio Website"
+
+Pages/components:
+- Home page
+- About section
+- Skills section
+- Projects section
+- Contact section
+- Responsive navigation bar
+- Footer
+- Dark/light theme toggle
+
+Requirements:
+- Responsive design
+- Clean UI
+- Good folder structure
+- Production-ready code
+
+========================
+2. Project Structure
+========================
+
+Generate the complete project structure:
+
+portfolio/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── styles/
+│   └── App.jsx
+│
+├── public/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+├── .gitignore
+├── README.md
+├── package.json
+└── vite.config.js
+
+
+========================
+3. Git Requirements
+========================
+
+The Git history is part of the assignment.
+
+Create a realistic Git workflow.
+
+Initialize repository:
+
+git init
+
+Create branches:
+
+main
+develop
+feature/home-page
+feature/navbar
+feature/contact-section
+hotfix/deploy-fix
+
+
+Use proper Git Flow style.
+
+========================
+4. Commit Requirements
+========================
+
+Create at least 20 meaningful commits.
+
+Every commit must represent a real development step.
+
+DO NOT create fake commits like:
+
+"update"
+"changes"
+"fix"
+
+Use professional commit messages:
+
+Examples:
+
+feat: initialize React project with Vite
+
+feat: create responsive navbar component
+
+feat: add hero section
+
+feat: implement projects section
+
+style: improve mobile responsiveness
+
+feat: add dark mode functionality
+
+ci: configure GitHub Actions deployment
+
+fix: resolve GitHub Pages routing issue
+
+
+Generate the complete commit sequence.
+
+========================
+5. Branch Workflow
+========================
+
+Implement changes through branches.
+
+Example workflow:
+
+main
+ |
+develop
+ |
+feature branches
+
+
+Each feature must:
+
+1. Create branch
+2. Implement feature
+3. Commit changes
+4. Merge through Pull Request
+
+
+Do not directly push features into main.
+
+
+========================
+6. Conflict Resolution
+========================
+
+Create at least two realistic Git conflicts.
+
+Examples:
+
+Conflict 1:
+Two branches modify the same navbar component.
+
+Conflict 2:
+Two branches modify README.md.
+
+Show:
+
+- How conflict happens
+- Git command output
+- How to resolve it
+- Final merge commit
+
+
+========================
+7. GitHub Repository Rules
+========================
+
+Explain how to configure:
+
+- Protected main branch
+- Require pull request before merge
+- Require review
+- Disable direct push
+
+
+========================
+8. GitHub Actions CI/CD
+========================
+
+Create:
+
+.github/workflows/deploy.yml
+
+
+Workflow:
+
+On push to main:
+
+1. Checkout repository
+2. Install dependencies
+3. Build React project
+4. Deploy to GitHub Pages
+
+
+The workflow must be valid.
+
+
+========================
+9. README.md
+========================
+
+Generate a complete README.
+
+It must include:
+
+# Project description
+
+# Installation
+
+# Running locally
+
+# Deployment
+
+# Git workflow explanation
+
+Explain:
+
+- Branches
+- Commits
+- Pull Requests
+- Conflict resolutions
+
+
+Include answers to these Git theory questions:
+
+1. What is .git directory?
+2. What information is stored inside .git?
+3. How is .git created?
+
+4. What does atomic mean in:
+- atomic commit
+- atomic pull request
+
+5. Explain differences:
+
+git fetch
+git pull
+git merge
+git rebase
+git cherry-pick
+
+
+6. Explain differences:
+
+git reset
+git revert
+git restore
+git switch
+git checkout
+
+
+7. Explain:
+
+- staging area/index
+- git stash
+
+
+8. Explain:
+
+- snapshot
+- relationship between snapshot and commit
+
+
+9. Explain:
+
+local repository vs remote repository
+
+
+========================
+10. Deployment
+========================
+
+Prepare the project for:
+
+GitHub Pages deployment.
+
+Explain:
+
+- Repository settings
+- Pages configuration
+- Actions deployment
+
+
+========================
+11. Output Format
+========================
+
+Provide:
+
+1. Complete source code
+2. Folder structure
+3. Git commands step-by-step
+4. Branch creation commands
+5. Commit sequence commands
+6. Conflict simulation commands
+7. GitHub Actions workflow
+8. Complete README.md
+
+
+Important:
+
+Do not skip Git commands.
+
+The final result must look like a real student's laboratory submission, not an AI-generated demo.
+```
+### تصاویر 
  ![](screnshots/chatgpt-1.png "سوال اول به chat gpt برای فهم مسئله")
  ![](screnshots/chatgpt-2.png "سوال دوم برای chat gpt برای تولید پرامپ تولید محتوا")
 ![](screnshots/opencode-1.png "فرستادن پرامپ تولید برای open code با مودل chat gpt mini 5.4")
